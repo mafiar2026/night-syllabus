@@ -147,8 +147,15 @@ export default function Footer() {
           {/* Bottom */}
           <div className=" border-gray-700 pt-8 text-center text-gray-400">
             <p>
-              © {new Date().getFullYear()} Vynteex. All rights reserved. | Made with ❤️ in
-              Bangladesh
+              © {new Date().getFullYear()} Vynteex. All rights reserved. | Developed by{' '}
+              <a
+                href="https://mrabidakash.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-600 text-xl font-bold hover:underline"
+              >
+                Mr.AbidAKash
+              </a>
             </p>
           </div>
         </div>

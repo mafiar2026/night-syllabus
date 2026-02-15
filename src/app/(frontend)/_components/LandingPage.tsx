@@ -41,7 +41,7 @@ const LandingPage = ({ page }: { page: any }) => {
           <SectionFour />
         </div>
       </div>
-      <div className=" bg-dark-light py-20">
+      <div className="bg-black py-20">
         <div className="max-w-7xl px-10 w-full flex flex-col justify-center items-center mx-auto">
           <SectionFive />
         </div>

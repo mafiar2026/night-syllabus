@@ -30,12 +30,22 @@ export default function SectionFive() {
     { title: 'VIP কমিউনিটি মেম্বারশিপ (লাইফটাইম)', old: '৳৬,০০০', new: 'ফ্রি', icon: '💎' },
   ]
 
+  const handleBuyNow = () => {
+    const el = document.getElementById('checkout')
+    if (el) {
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }
+
   return (
-    <section className="bg-black text-white py-16 px-4">
-      <div className="max-w-4xl mx-auto space-y-10">
+    <section className="bg-transparent border border-primary text-white py-16 px-6 min-w-2xl">
+      <div className="max-w-5xl mx-auto space-y-10 text-2xl font-bold">
         {/* Countdown */}
-        <div className="flex flex-col items-center gap-3">
-          <div className="flex items-center gap-2 text-lg font-semibold">
+        <div className="flex justify-between items-center gap-10 px-3">
+          <div className="flex items-center gap-2 font-semibold">
             ⏱ <span>অফার শেষ হতে বাকি:</span>
           </div>
           <Countdown />
@@ -72,12 +82,12 @@ export default function SectionFive() {
 
         {/* CTA */}
         <div className="text-center pt-6">
-          <a
-            href="https://nightsyllabus.com/checkout-master-lover-course/"
+          <button
+            onClick={handleBuyNow}
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full text-lg font-bold transition-transform hover:scale-105"
           >
             🚀 অফারটি নিতে চাই!
-          </a>
+          </button>
         </div>
       </div>
     </section>

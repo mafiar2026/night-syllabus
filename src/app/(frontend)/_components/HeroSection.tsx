@@ -17,34 +17,23 @@ export default function HeroSection({ page }: { page: any }) {
   }
 
   return (
-    <section className="py-6 w-full">
-      <div className="w-full flex flex-col items-center justify-center">
+    <section className="py-14 ">
+      <div className="w-full flex flex-col gap-5 items-center justify-center">
         {/* Heading 1 */}
-        <div
-          className="elementor-element elementor-element-1994505 elementor-widget elementor-widget-heading"
-          data-id="1994505"
-        >
-          <div className="elementor-heading-title elementor-size-default">
-            ✨ 4,500+ Satisfied Learners ✨
-          </div>
+        <div className="p-3 border-primary border-2 rounded-full" data-id="1994505">
+          <span className="">✨ 4,500+ Satisfied Learners ✨</span>
         </div>
 
         {/* Heading 2 */}
-        <div
-          className="elementor-element elementor-element-1364672 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading"
-          data-id="1364672"
-        >
-          <div className="elementor-heading-title elementor-size-default">
+        <div className="text-center" data-id="1364672">
+          <div className="text-7xl font-extrabold">
             বিছানায় আপনার স্ত্রীকে কি <br />
             <span style={{ color: '#FF0000' }}>সত্যিই তৃপ্তি দিতে পারছেন?</span>
           </div>
         </div>
 
         {/* Heading 3 */}
-        <div
-          className="elementor-element elementor-element-5216b81 elementor-widget__width-initial elementor-widget elementor-widget-heading"
-          data-id="5216b81"
-        >
+        <div className="text-2xl font-bold text-center" data-id="5216b81">
           <div className="elementor-heading-title elementor-size-default">
             ৯০% পুরুষ জানেই না, কিভাবে নারীর শরীরকে উত্তেজিত করতে হয়!
             <br />
@@ -58,45 +47,26 @@ export default function HeroSection({ page }: { page: any }) {
         </div>
 
         {/* Video Section */}
-        <div
-          className="elementor-element elementor-element-829cec1 elementor-widget elementor-widget-video"
-          data-id="829cec1"
-        >
-          <div className="w-6xl max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-xl overflow-hidden group cursor-pointer">
-              {/* Thumbnail */}
-              <div
-                className="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
-                style={{
-                  backgroundImage:
-                    'url(https://nightsyllabus.com/wp-content/uploads/2026/01/Thumbnail-Master-Lover.webp)',
-                }}
-              />
-
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-
-              {/* Play Button */}
-              <div
-                className="absolute inset-0 flex items-center justify-center"
-                onClick={() => window.open('https://youtu.be/abzpfDXtXPE', '_blank')}
-              >
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-red-600 flex items-center justify-center shadow-xl scale-100 group-hover:scale-110 transition-transform">
-                  <div className="text-white text-3xl md:text-4xl ml-1">▶</div>
-                </div>
-              </div>
-            </div>
+        <div className="border-white border-2 rounded-md" data-id="829cec1">
+          <div className="w-6xl h-auto max-w-4xl mx-auto">
+            <iframe
+              width="100%"
+              style={{ aspectRatio: '16/9' }}
+              src="https://www.youtube.com/embed/abzpfDXtXPE?si=h9gULhx-TWaPy8M3"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
 
         {/* Buttons Container */}
-        <div
-          className=""
-          data-id="74edddc"
-        >
+        <div className="flex gap-5 items-center justify-center text-2xl mt-5" data-id="74edddc">
           {/* Module Button */}
           <div
-            className="elementor-element elementor-element-e6e30c2 elementor-widget elementor-widget-button"
+            className="bg-white font-bold text-black px-4 py-2 rounded-full cursor-pointer"
             data-id="e6e30c2"
           >
             <div
@@ -116,21 +86,18 @@ export default function HeroSection({ page }: { page: any }) {
 
           {/* Enroll Button */}
           <div
-            className="elementor-element elementor-element-f8aa14d elementor-widget elementor-widget-button"
+            className="bg-primary text-white font-bold px-4 py-2 rounded-full cursor-pointer"
             data-id="f8aa14d"
           >
             <div
               className="elementor-button elementor-size-sm elementor-animation-grow"
               style={{ cursor: 'pointer' }}
-              onClick={() =>
-                (window.location.href =
-                  'https://nightsyllabus.com/checkout-how-to-satisfy-a-woman-in-bed-course/')
-              }
+              onClick={handleBuyNow}
             >
-              <div className="elementor-button-content-wrapper">
-                <div className="elementor-button-icon">🚀</div>
-                <div className="elementor-button-text">এখনই এনরোল করুন</div>
-              </div>
+              <button className="flex gap-2 items-center justify-center font-bold">
+                <span className="elementor-button-icon">🚀</span>
+                <span className="font-bold">এখনই এনরোল করুন</span>
+              </button>
             </div>
           </div>
         </div>

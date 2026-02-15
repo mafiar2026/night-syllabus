@@ -3,15 +3,15 @@ import './styles.css'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Playfair_Display } from 'next/font/google'
+import { Hind_Siliguri } from 'next/font/google'
 import { Toaster } from 'sonner'
 import FacebookPixel from '@/components/FacebookPixel'
 // import { GoogleTagManager } from '@next/third-parties/google'
 
-const playfair = Playfair_Display({
+const hindSiliguri = Hind_Siliguri({
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  variable: '--font-playfair',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-hind-siliguri',
 })
 
 export const metadata = {
@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={playfair.variable}>
+    <html lang="en" className={hindSiliguri.className}>
       {/* <GoogleTagManager gtmId="GTM-KXTSKLLN" gtmScriptUrl='' /> */}
 
       <body className="overflow-x-hidden bg-black">

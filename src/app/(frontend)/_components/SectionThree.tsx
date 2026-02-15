@@ -38,23 +38,25 @@ export default function SectionThree({ page }: { page: any }) {
   ]
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-gray-50 text-black">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Headings */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center">
-          How This Course Will Transform You?
-        </h2>
+        <div className="flex justify-center">
+          <h2 className="text-3xl md:text-lg font-bold text-center p-2 px-6 rounded-full border-primary border">
+            How This Course Will Transform You?
+          </h2>
+        </div>
 
-        <h3 className="text-xl md:text-2xl font-semibold text-center">
+        <h3 className="text-xl md:text-6xl font-bold text-center">
           এই কোর্সের মাধ্যমে <span className="text-red-600">আপনিও হবেন,</span>
         </h3>
 
         {/* List */}
-        <ul className="space-y-5 pt-6">
+        <ul className="space-y-8 pt-6">
           {items.map((item, i) => (
-            <li key={i} className="flex items-start gap-4">
-              <span className="text-2xl md:text-3xl text-red-600 mt-1">{item.icon}</span>
-              <p className="text-base md:text-lg text-gray-800">{item.text}</p>
+            <li key={i} className="flex items-center gap-4 text-3xl font-semibold">
+              <span className="text-2xl md:text-5xl text-red-600">{item.icon}</span>
+              <p className="text-base md:text-3xl text-gray-800">{item.text}</p>
             </li>
           ))}
         </ul>
@@ -71,12 +73,12 @@ export default function SectionThree({ page }: { page: any }) {
 
         {/* CTA */}
         <div className="text-center pt-6 space-y-4">
-          <a
-            href="https://nightsyllabus.com/checkout-how-to-satisfy-a-woman-in-bed-course/"
+          <button
+            onClick={handleBuyNow}
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-transform hover:scale-105"
           >
             🚀 এখনই এনরোল করুন
-          </a>
+          </button>
 
           <p className="text-lg font-semibold text-gray-800">
             এই অফার শুধুমাত্র সীমিত সময়ের জন্য!

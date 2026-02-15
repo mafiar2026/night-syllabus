@@ -23,13 +23,7 @@ export default function Header() {
           data-e-type="widget"
           data-widget_type="theme-site-logo.default"
         >
-          <div
-            onClick={() =>
-              (window.location.href =
-                'https://nightsyllabus.com/how-to-satisfy-a-woman-in-bed-course/')
-            }
-            style={{ cursor: 'pointer' }}
-          >
+          <div onClick={handleBuyNow} style={{ cursor: 'pointer' }}>
             <div
               role="img"
               aria-label="Site Logo"
@@ -93,10 +87,7 @@ export default function Header() {
         <div className="elementor-element elementor-element-9c10d34 elementor-mobile-align-right elementor-widget elementor-widget-button">
           <div
             className="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-            onClick={() =>
-              (window.location.href =
-                'https://nightsyllabus.com/checkout-how-to-satisfy-a-woman-in-bed-course/')
-            }
+            onClick={handleBuyNow}
             style={{ cursor: 'pointer' }}
           >
             <button className="bg-primary text-white px-4 py-2 rounded-lg">Enroll Now</button>

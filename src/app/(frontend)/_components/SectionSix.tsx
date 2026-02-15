@@ -29,6 +29,16 @@ const faqs = [
 export default function SectionSix() {
   const [open, setOpen] = useState(0)
 
+    const handleBuyNow = () => {
+      const el = document.getElementById('checkout')
+      if (el) {
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+    }
+
   return (
     <section className="bg-black text-white py-16 px-4">
       <div className="max-w-4xl mx-auto space-y-10">
@@ -70,12 +80,12 @@ export default function SectionSix() {
             💬 যোগাযোগ করুন
           </a>
 
-          <a
-            href="https://nightsyllabus.com/checkout-how-to-satisfy-a-woman-in-bed-course/"
+          <button
+            onClick={handleBuyNow}
             className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full font-bold transition-transform hover:scale-105"
           >
             🚀 এখনই এনরোল করুন
-          </a>
+          </button>
         </div>
       </div>
     </section>

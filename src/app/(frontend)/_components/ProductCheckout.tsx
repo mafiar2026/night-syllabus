@@ -299,9 +299,7 @@ export default function ProductCheckout({ page }: { page: any }) {
                 // checked={variant.id === v.id}
                 // onChange={() => setVariant(v)}
               />
-              <span className="flex-1">
-                যৌ*ন স্বাস্থ্য সমস্যা ও সমাধানের Complete Guideline × 1
-              </span>
+              <span className="flex-1">How to Satisfy a Woman in Bed – Course × 1</span>
               <span className="font-medium">৳{variant.price}</span>
             </label>
             {/* ))} */}
@@ -347,7 +345,7 @@ export default function ProductCheckout({ page }: { page: any }) {
 
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
 
-          <label className="font-semibold" htmlFor="address">
+          {/* <label className="font-semibold" htmlFor="address">
             আপনার ঠিকানা লিখুন
           </label>
 
@@ -363,7 +361,7 @@ export default function ProductCheckout({ page }: { page: any }) {
             }}
           />
 
-          {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
+          {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>} */}
 
           <label className="font-semibold" htmlFor="mobile">
             আপনার মোবাইল নাম্বর লিখুন{' '}
@@ -410,8 +408,8 @@ export default function ProductCheckout({ page }: { page: any }) {
               <span>Product</span>
               <span>Subtotal</span>
             </div>
-            <div className="flex justify-between">
-              <span>যৌ*ন স্বাস্থ্য সমস্যা ও সমাধানের Complete Guideline × 1</span>
+            <div className="flex justify-between mr-5">
+              <span>How to Satisfy a Woman in Bed – Course × 1</span>
               <span>৳{fullPrice}</span>
             </div>
 
@@ -486,7 +484,6 @@ export default function ProductCheckout({ page }: { page: any }) {
           </button>
         </aside>
       </div>
-      
     </div>
   )
 }

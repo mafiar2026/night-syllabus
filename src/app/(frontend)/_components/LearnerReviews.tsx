@@ -13,15 +13,26 @@ export default function LearnerReviews() {
     'https://nightsyllabus.com/wp-content/uploads/2026/01/rmlc-5.webp',
   ]
 
+  const handleBuyNow = () => {
+    const el = document.getElementById('checkout')
+    if (el) {
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }
+
   return (
     <section className="">
-      <div className="max-w-7xl mx-auto text-center space-y-6">
+      <div className="max-w-7xl mx-auto text-center space-y-1">
         {/* Headings */}
-        <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-red-600">৪,৫০০+ লার্নার</span> কি বলছে?
+        <h2 className="text-3xl md:text-6xl font-bold text-center mx-auto text-black">
+          <span className="text-red-600 w-full items-center justify-center">৪,৫০০+ লার্নার</span> কি
+          বলছে?
         </h2>
 
-        <h3 className="text-lg md:text-xl text-gray-700">
+        <h3 className="text-lg md:text-2xl text-gray-700 text-center">
           আমাদের ইনবক্স ও কমেন্ট থেকে স্যাটিসফাইড লার্নারদের কিছু রিভিউ:
         </h3>
 
@@ -58,12 +69,12 @@ export default function LearnerReviews() {
 
         {/* CTA */}
         <div className="pt-10 space-y-4">
-          <a
-            href="https://nightsyllabus.com/checkout-how-to-satisfy-a-woman-in-bed-course/"
+          <button
+            onClick={handleBuyNow}
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-transform hover:scale-105"
           >
             🚀 এখনই এনরোল করুন
-          </a>
+          </button>
 
           <h4 className="text-lg font-semibold text-gray-800">
             ⚠️ এই কোর্সটি শুধুমাত্র প্রাপ্তবয়স্কদের জন্য! ⚠️

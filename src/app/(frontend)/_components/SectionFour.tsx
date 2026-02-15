@@ -56,14 +56,14 @@ export default function SectionFour() {
   ]
 
   return (
-    <section className="py-16 px-4 bg-white text-black w-full">
+    <section id="module" className="py-16 px-4 bg-white text-black w-full">
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Headings */}
         <div className="text-center space-y-3">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-6xl font-bold">
             কোর্স <span className="text-red-600">মডিউল</span>
           </h2>
-          <p className="text-lg text-gray-700">একনজরে দেখে নিই এই কোর্সে কী কী থাকছে...</p>
+          <p className="text-2xl text-gray-700">একনজরে দেখে নিই এই কোর্সে কী কী থাকছে...</p>
         </div>
 
         {/* Divider */}
@@ -87,14 +87,14 @@ export default function SectionFour() {
               open={i === 0}
               className="group border border-gray-300 rounded-lg overflow-hidden"
             >
-              <summary className="cursor-pointer flex justify-between items-center px-5 py-4 bg-gray-100 hover:bg-gray-200 font-semibold text-lg">
+              <summary className="cursor-pointer flex justify-between items-center px-5 py-4 bg-gray-100 hover:bg-gray-200 font-semibold text-2xl">
                 {mod.title}
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
 
               <ul className="px-6 py-4 space-y-3 bg-white">
                 {mod.items.map((item, idx) => (
-                  <li key={idx} className="flex gap-2 text-gray-800">
+                  <li key={idx} className="flex gap-2 text-gray-800 text-xl">
                     <span className="text-red-600">🔒</span>
                     {item}
                   </li>

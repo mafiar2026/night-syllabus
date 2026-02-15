@@ -1,6 +1,6 @@
 export default function WhatsAppCTA() {
   return (
-    <section className="bg-transparent py-14 px-4 border">
+    <section className="bg-transparent py-10 px-4 border">
       <div className="max-w-4xl mx-auto text-center space-y-6">
         {/* Heading */}
         <h2 className="text-black text-2xl md:text-3xl font-bold leading-relaxed">
