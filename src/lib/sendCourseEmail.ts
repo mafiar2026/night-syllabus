@@ -11,8 +11,10 @@ export async function sendCourseEmail({ to, paymentID }: { to: string; paymentID
     },
   })
 
-  const courseVideosLink = 'https://drive.google.com/your-course-videos-link'
-  const ebooksLink = 'https://drive.google.com/your-ebooks-link'
+  const courseVideosLink =
+    'https://drive.google.com/drive/folders/1W2Vy8A2SNI3RSR0HtHqHTNYIPmxLYWEl?usp=sharing'
+  const ebooksLink =
+    'https://drive.google.com/drive/folders/1W2Vy8A2SNI3RSR0HtHqHTNYIPmxLYWEl?usp=sharing'
 
   const html = `
     <h2>🎉 Payment Successful!</h2>
