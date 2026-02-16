@@ -39,7 +39,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="hidden md:flex ">
+        <div className="hidden ">
           <div className="flex gap-7">
             <div className="e-n-menu-item">
               <div
