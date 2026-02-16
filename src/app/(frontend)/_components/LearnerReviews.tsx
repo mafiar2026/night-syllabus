@@ -28,7 +28,7 @@ export default function LearnerReviews() {
       <div className="max-w-7xl mx-auto text-center space-y-4 md:space-y-6">
         {/* Headings */}
         <h2 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
-          <span className="text-red-600">৪,৫০০+ লার্নার</span> কি বলছে?
+          <span className="text-red-600">{/* ৪,৫০০+ */} লার্নারস রা</span> কি বলছে?
         </h2>
 
         <h3 className="text-sm sm:text-base md:text-2xl text-gray-700">

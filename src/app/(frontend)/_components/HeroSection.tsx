@@ -20,9 +20,9 @@ export default function HeroSection({ page }: { page: any }) {
     <section className="py-10 md:py-14 px-4">
       <div className="w-full flex flex-col gap-6 items-center justify-center">
         {/* Heading 1 */}
-        <div className="p-2 md:p-3 border-primary border-2 rounded-full text-center">
+        {/* <div className="p-2 md:p-3 border-primary border-2 rounded-full text-center">
           <span className="text-sm md:text-base">✨ 4,500+ Satisfied Learners ✨</span>
-        </div>
+        </div> */}
 
         {/* Heading 2 */}
         <div className="text-center">

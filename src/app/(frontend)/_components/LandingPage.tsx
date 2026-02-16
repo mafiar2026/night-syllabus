@@ -26,11 +26,11 @@ const LandingPage = ({ page }: { page: any }) => {
           <SectionOne page={page} />
         </div>
       </div>
-      <div className="  bg-white border-b border-gray-200">
+      {/* <div className="  bg-white border-b border-gray-200">
         <div className="max-w-7xl px-10 w-full flex flex-col justify-center items-center mx-auto">
           <SectionTwo page={page} />
         </div>
-      </div>
+      </div> */}
       <div className="bg-white border-b border-gray-200  md:py-10">
         <div className="max-w-7xl md:px-10 w-full flex flex-col justify-center items-center mx-auto">
           <SectionThree page={page} />
