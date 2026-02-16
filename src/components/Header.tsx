@@ -4,8 +4,6 @@ import CountDownTimer from '@/app/(frontend)/_components/CountDownTimer'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-
-
 // components/Header.tsx
 export default function Header() {
   const handleBuyNow = () => {
@@ -20,7 +18,7 @@ export default function Header() {
   return (
     <div className="border-b border-primary">
       {/* Countdown */}
-      <div className="hidden md:flex flex-col items-center justify-center  gap-2 font-semibold mt-3">
+      <div className="flex flex-col items-center justify-center  gap-2 font-semibold mt-3">
         <span> ⏱ ৮৭% ডিসকাউন্ট শেষ হতে আর বাকি:</span>
         <div className="flex justify-center sm:justify-end">
           <CountDownTimer />
