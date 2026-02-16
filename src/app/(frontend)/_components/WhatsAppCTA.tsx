@@ -4,8 +4,8 @@ export default function WhatsAppCTA() {
       <div className="max-w-4xl mx-auto text-center space-y-6">
         {/* Heading */}
         <h2 className="text-black text-2xl md:text-3xl font-bold leading-relaxed">
-          পেমেন্ট করতে সমস্যা হলে বা কিছু জানার প্রয়োজন হলে <br />
-          হোয়াটসঅ্যাপে মেসেজ করুন!
+          Send money করতে সমস্যা হলে বা bKash না থাকলে অথবা কোনো তথ্য জানার প্রয়োজন হলে হোয়াটসঅ্যাপে
+          মেসেজ করুন।
         </h2>
 
         {/* WhatsApp Button */}

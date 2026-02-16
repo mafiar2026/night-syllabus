@@ -234,7 +234,7 @@ export default function ProductCheckout({ page }: { page: any }) {
   const handlePurchase = async () => {
     const newErrors = {
       name: validateField('name', customerInfo.name),
-      address: validateField('address', customerInfo.address),
+      // address: validateField('address', customerInfo.address),
       phone: validateField('phone', customerInfo.phone),
       email: validateField('email', customerInfo.email),
     }
