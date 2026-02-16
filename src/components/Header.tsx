@@ -1,6 +1,10 @@
 'use client'
 
+import CountDownTimer from '@/app/(frontend)/_components/CountDownTimer'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+
 
 // components/Header.tsx
 export default function Header() {
@@ -15,6 +19,13 @@ export default function Header() {
   }
   return (
     <div className="border-b border-primary">
+      {/* Countdown */}
+      <div className="hidden md:flex flex-col items-center justify-center  gap-2 font-semibold mt-3">
+        <span> ⏱ ৮৭% ডিসকাউন্ট শেষ হতে আর বাকি:</span>
+        <div className="flex justify-center sm:justify-end">
+          <CountDownTimer />
+        </div>
+      </div>
       <header className="flex max-sm:flex-col max-sm:gap-6 items-center justify-between px-6 py-5  -sm  max-w-7xl mx-auto">
         <div
           className="elementor-element elementor-element-46825f1 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"

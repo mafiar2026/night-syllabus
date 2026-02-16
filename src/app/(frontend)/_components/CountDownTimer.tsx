@@ -1,76 +1,50 @@
 'use client'
+import { useEffect, useState } from 'react'
 
-import { useEffect, useRef, useState } from 'react'
-
-type TimeLeft = {
-  days: string
-  hours: string
-  minutes: string
-  seconds: string
-}
-
-export default function CountDownTimer() {
-  // fixed once per mount
-  const offerEndRef = useRef<number>(Date.now() + 2 * 24 * 60 * 60 * 1000)
-
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: '00',
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  })
+function CountDownTimer({ duration = 5 * 3600 + 22 * 60 + 42 }) {
+  const [time, setTime] = useState(duration)
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const now = Date.now()
-      const distance = offerEndRef.current - now
-
-      if (distance <= 0) {
-        clearInterval(timer)
-        setTimeLeft({
-          days: '00',
-          hours: '00',
-          minutes: '00',
-          seconds: '00',
-        })
-        return
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24)
-      const minutes = Math.floor((distance / (1000 * 60)) % 60)
-      const seconds = Math.floor((distance / 1000) % 60)
-
-      setTimeLeft({
-        days: String(days).padStart(2, '0'),
-        hours: String(hours).padStart(2, '0'),
-        minutes: String(minutes).padStart(2, '0'),
-        seconds: String(seconds).padStart(2, '0'),
-      })
+      setTime((t) => (t > 0 ? t - 1 : 0))
     }, 1000)
-
     return () => clearInterval(timer)
   }, [])
 
-  return (
-    <div className="countdown-modern">
-      <div className="text-center mb-4">
-        <span className="text-lg font-semibold bengali-text text-accent">⏰ অফার শেষ হবে:</span>
-      </div>
+  const days = Math.floor(time / 86400)
+  const hours = Math.floor((time % 86400) / 3600)
+  const minutes = Math.floor((time % 3600) / 60)
+  const seconds = time % 60
 
-      <div className="flex justify-center gap-3">
-        {[
-          { label: 'দিন', value: timeLeft.days },
-          { label: 'ঘন্টা', value: timeLeft.hours },
-          { label: 'মিনিট', value: timeLeft.minutes },
-          { label: 'সেকেন্ড', value: timeLeft.seconds },
-        ].map((item) => (
-          <div key={item.label} className="countdown-box">
-            <div className="text-2xl font-bold">{item.value}</div>
-            <div className="text-xs bengali-text">{item.label}</div>
-          </div>
-        ))}
-      </div>
+  const format = (num: number) => String(num).padStart(2, '0')
+
+  const Box = ({
+    value,
+    label,
+    highlight = false,
+  }: {
+    value: string
+    label: string
+    highlight?: boolean
+  }) => (
+    <div
+      className={`w-20 sm:w-24 md:w-28 h-20 rounded-xl border-2 
+      flex flex-col items-center justify-center
+      ${highlight ? 'bg-red-700 border-red-600' : 'bg-black border-red-600 text-white'}`}
+    >
+      <span className="text-3xl md:text-4xl font-bold">{value}</span>
+      <span className="text-sm md:text-base mt-1">{label}</span>
+    </div>
+  )
+
+  return (
+    <div className="flex gap-3 md:gap-5 justify-center">
+      <Box value={format(days)} label="দিন" />
+      <Box value={format(hours)} label="ঘন্টা" />
+      <Box value={format(minutes)} label="মিনিট" />
+      <Box value={format(seconds)} label="সেকেন্ড" highlight />
     </div>
   )
 }
+
+export default CountDownTimer
