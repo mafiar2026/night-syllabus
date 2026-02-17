@@ -66,7 +66,7 @@ export default function SectionThree({ page }: { page: any }) {
 
         {/* Pricing */}
         <h3 className="text-xl md:text-2xl font-semibold text-center">
-          কোর্সের রেগুলার ফি{' '}
+          কোর্সের রেগুলার মূল্য{' '}
           <span className="text-red-600 line-through">{price?.discount} টাকা</span>;
           <br className="md:hidden" /> আজকের জন্য মাত্র{' '}
           <span className="text-red-600 font-bold">{price?.price} টাকা!</span>
