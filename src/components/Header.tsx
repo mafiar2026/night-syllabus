@@ -37,7 +37,7 @@ export default function Header() {
             <div
               role="img"
               aria-label="Site Logo"
-              className="md:w-[230px] md:h-[72px] w-[180px] h-[70px]"
+              className="md:w-[80px] md:h-[72px] w-[80px] h-[70px]"
               style={{
                 backgroundImage: 'url(/night.jpeg)',
                 backgroundSize: 'cover',
