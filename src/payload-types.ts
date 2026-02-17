@@ -198,6 +198,7 @@ export interface BkashPayment {
     | number
     | boolean
     | null;
+  hasEmail?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -348,6 +349,7 @@ export interface BkashPaymentsSelect<T extends boolean = true> {
   transactionStatus?: T;
   user?: T;
   customerInfo?: T;
+  hasEmail?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -31,7 +31,7 @@ export async function sendCourseEmail({ to, paymentID }: { to: string; paymentID
   `
 
   await transporter.sendMail({
-    from: `"Your Brand" <${process.env.SMTP_USER}>`,
+    from: `"Healthy Intimate Life" <${process.env.SMTP_USER}>`,
     to,
     subject: 'Your Course Access – Payment Successful',
     html,

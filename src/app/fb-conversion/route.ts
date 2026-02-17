@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Platform not specified in request body' }, { status: 400 })
     }
 
-    console.log(`🟡 Received ${platform} event:`, JSON.stringify(body, null, 2))
+    // console.log(`🟡 Received ${platform} event:`, JSON.stringify(body, null, 2))
 
     if (platform === 'facebook') {
       // ===== FACEBOOK CAPI =====
@@ -181,7 +181,7 @@ export async function POST(request: NextRequest) {
         },
       }
 
-      console.log('🔵 Facebook Payload:', JSON.stringify(payload, null, 2))
+      // console.log('🔵 Facebook Payload:', JSON.stringify(payload, null, 2))
 
       const response = await fetch(
         `https://graph.facebook.com/v18.0/${pixelId}/events?access_token=${accessToken}`,
@@ -196,7 +196,7 @@ export async function POST(request: NextRequest) {
       )
 
       const result = await response.json()
-      console.log('🟢 Facebook Response:', result)
+      // console.log('🟢 Facebook Response:', result)
 
       return NextResponse.json({
         success: true,
@@ -244,7 +244,7 @@ export async function POST(request: NextRequest) {
         data: [eventObj],
       }
 
-      console.log('🔵 TikTok Payload:', JSON.stringify(tiktokPayload, null, 2))
+      // console.log('🔵 TikTok Payload:', JSON.stringify(tiktokPayload, null, 2))
 
       const response = await fetch('https://business-api.tiktok.com/open_api/v1.3/event/track/', {
         method: 'POST',
@@ -256,7 +256,7 @@ export async function POST(request: NextRequest) {
       })
 
       const result = await response.json()
-      console.log('🟢 TikTok Response:', result)
+      // console.log('🟢 TikTok Response:', result)
 
       return NextResponse.json({
         success: true,

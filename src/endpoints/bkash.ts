@@ -165,6 +165,16 @@ export const bkashCallback: Endpoint = {
       // ✅ PAYMENT SUCCESS
       // =============================
       if (data.transactionStatus === 'Completed') {
+        const user: any = await payload.find({
+          collection: 'bkash-payments',
+          where: { paymentID: { equals: paymentID } },
+          select: {
+            customerInfo: true,
+          },
+        })
+
+        console.log('User found:', user)
+
         await payload.update({
           collection: 'bkash-payments',
           where: { paymentID: { equals: paymentID } },
@@ -180,9 +190,9 @@ export const bkashCallback: Endpoint = {
         })
 
         // ✅ SEND EMAIL
-        if (data.customerEmail) {
+        if (user.docs && user.docs.length > 0) {
           await sendCourseEmail({
-            to: data.customerEmail,
+            to: user.docs[0].customerInfo?.email || '',
             paymentID,
           })
         }
