@@ -229,6 +229,12 @@ export default function PaymentSuccess() {
           </p>
         </div>
 
+        <h2 className=" font-bold text-center p-2 px-6 rounded-full border-primary border mt-3">
+          We have sent you an email with the download link
+          <br />
+          Please check your email : <a className="text-blue-500" href="https://mail.google.com/">{customer?.email}</a>
+        </h2>
+
         {/* Content */}
         <div className="p-5 space-y-6">
           {/* Customer Info */}
@@ -245,8 +251,11 @@ export default function PaymentSuccess() {
                 <span className="font-medium">Phone:</span> {customer?.phone}
               </p>
               <p>
-                <span className="font-medium">Address:</span> {customer?.address}
+                <span className="font-medium">Email:</span> {customer?.email}
               </p>
+              {/* <p>
+                <span className="font-medium">Address:</span> {customer?.address}
+              </p> */}
             </div>
           </section>
 
